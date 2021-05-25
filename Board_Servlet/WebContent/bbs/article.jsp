@@ -11,8 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게 시 판</title>
 
-<link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/article.css"/>
+<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/article.css"/>
 </head>
 <body>
 	<div id="bbs">

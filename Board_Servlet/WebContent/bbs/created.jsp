@@ -10,10 +10,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판</title>
-<link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="<%=cp%>/board/css/created.css"/>
+<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="<%=cp%>/bbs/css/created.css"/>
 
-<script type="text/javascript" src="<%=cp%>/board/js/util.js"></script>
+<script type="text/javascript" src="<%=cp%>/bbs/js/util.js"></script>
 
 <script type="text/javascript">
 
@@ -38,7 +38,7 @@
 			return;
 		}
 		
-		if(!isValidKorean(str)){//이름이 한글이냐 아니냐
+		/* if(!isValidKorean(str)){//이름이 한글이냐 아니냐
 			alert("\n이름은 한글로만 입력 가능합니다.");
 			f.name.focus();
 			return;
@@ -51,7 +51,7 @@
 				f.email.focus();
 				return;
 			}
-		}
+		} */
 		
 		str = f.content.value;
 		str = str.trim();
@@ -71,7 +71,7 @@
 		}
 		f.pwd.value=str;
 		
-		f.action = "<%=cp%>";
+		f.action = "<%=cp%>/bbs/create.do";
 		f.submit();
 		
 	}
@@ -135,7 +135,8 @@
 			<input type="button" value="등록하기" class="btn2" onclick="sendIt();"/>
 			<input type="button" value="다시입력" class="btn2" 
 			onclick="document.myForm.subject.focus();"/>
-			<input type="button" value="작성취소" class="btn2" onclick=""/>
+			<input type="button" value="작성취소" class="btn2" 
+			onclick="javascript:location.href='<%=cp%>/bbs/list.do';"/>
 		</div>
 	</form>
 
