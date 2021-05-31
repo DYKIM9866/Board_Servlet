@@ -9,7 +9,7 @@ public class BoardDTO {
 	private String subject;
 	private String content;
 	private String ipAddr;
-	private String hitCount;
+	private int hitCount;
 	private String created;
 	public int getBoardNum() {
 		return boardNum;
@@ -53,10 +53,10 @@ public class BoardDTO {
 	public void setIpAddr(String ipAddr) {
 		this.ipAddr = ipAddr;
 	}
-	public String getHitCount() {
+	public int getHitCount() {
 		return hitCount;
 	}
-	public void setHitCount(String hitCount) {
+	public void setHitCount(int hitCount) {
 		this.hitCount = hitCount;
 	}
 	public String getCreated() {

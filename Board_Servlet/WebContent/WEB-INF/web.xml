@@ -18,7 +18,7 @@
  
  <servlet-mapping>
  	<servlet-name>boardServlet</servlet-name>
- 	<url-pattern>/bbs/*</url-pattern>
+ 	<url-pattern>/board/*</url-pattern>
  </servlet-mapping>
  <!-- 인코딩 CharsetEncodingFilter -->
   <filter>

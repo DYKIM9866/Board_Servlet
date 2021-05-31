@@ -21,43 +21,47 @@
 		</div>
 		<div id="bbsArticle">
 			<div id="bbsArticle_header">
-				게시물 제목
+				${dto.subject}
 			</div>
 			<div class="bbsArticle_bottomLine">
 				<dl>
 					<dt>작성자</dt>
-					<dd>유인나</dd>
+					<dd>${dto.name}</dd>
 					<dt>줄 수</dt>
-					<dd>20</dd>
+					<dd>${lineSu}</dd>
 				</dl>
 			</div>
 			<div class="bbsArticle_bottomLine">
 				<dl>
 					<dt>등록일</dt>
-					<dd>2021-04-07</dd>
+					<dd>${dto.created}</dd>
 					<dt>조회수</dt>
-					<dd>10</dd>
+					<dd>${dto.hitCount}</dd>
 				</dl>
 			</div>
 			<div id="bbsArticle_content">
 				<table width="600">
 					<tr>
 						<td style="padding: 20px 80px 20px 62px;" valign="top" height="200">
-						게시물내용
+						${dto.content}
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="bbsArticle_noLine" style="text-align:right;">
-				From : 127.0.0.1
+				From : ${dto.ipAddr}
 			</div>
 			<div id = "bbsArticle_footer">
+			
 				<div id = "leftFooter">
-					<input type="button" value=" 수정 " class="btn2" onclick=""/>
-					<input type="button" value=" 삭제 " class="btn2" onclick=""/>		
+					<input type="button" value=" 수정 " class="btn2" 
+					onclick="javascript:location.href='<%=cp%>/board/updated.do?${params}&boardNum=${dto.boardNum}'"/>
+					<input type="button" value=" 삭제 " class="btn2" 
+					onclick="javascript:location.href='<%=cp%>/board/deleted.do?${params}&boardNum=${dto.boardNum}'"/>		
 				</div>
 				<div id = "rightFooter">
-					<input type="button" value=" 리스트 " class="btn2" onclick=""/>
+					<input type="button" value=" 리스트 " class="btn2" 
+					onclick="javascript:location.href='<%=cp%>/board/list.do?${params}'"/>
 				</div>
 			</div>
 		</div>
